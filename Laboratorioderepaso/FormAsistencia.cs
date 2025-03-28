@@ -12,9 +12,61 @@ namespace Laboratorioderepaso
 {
     public partial class FormAsistencia: Form
     {
+        List<Empleado> empleados = new List<Empleado>();
+        List<Asistencia> asistencias = new List<Asistencia>();
         public FormAsistencia()
         {
             InitializeComponent();
+        }
+
+        private void btnAgregarAsistencia_Click(object sender, EventArgs e)
+        {
+            Asistencia asistencia = new Asistencia();
+            asistencia.NoEmpleado = Convert.ToInt16(comboBoxEmpleados.SelectedValue);
+            asistencia.horasMes = ((int)numericHorasxMes.Value);
+            asistencia.mes = Convert.ToInt16(numericMes.Value);
+
+            asistencias.Add(asistencia);
+
+            AsistenciaArchivo asistenciaArchivo = new AsistenciaArchivo();
+
+            asistenciaArchivo.Guardar(@"../../Asistencias.json", asistencias);
+        
+
+    }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            FormReporte formReporte = new FormReporte();
+            formReporte.Show();
+
+        }
+
+        private void FormAsistencia_Load(object sender, EventArgs e)
+        {
+            List<Empleado> empleados = new List<Empleado>();
+            EmpleadoArchivo empleadoArchivo = new EmpleadoArchivo();
+            empleados = empleadoArchivo.Leer(@"../../Empleados.json");
+
+            comboBoxEmpleados.DisplayMember = "Nombre";
+            comboBoxEmpleados.ValueMember = "NoEmpleado";
+            comboBoxEmpleados.DataSource = empleados;
+
+        }
+
+        private void comboBoxEmpleados_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericMes_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericHorasxMes_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

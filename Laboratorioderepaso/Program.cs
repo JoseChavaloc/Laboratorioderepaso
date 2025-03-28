@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Laboratorioderepaso
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.

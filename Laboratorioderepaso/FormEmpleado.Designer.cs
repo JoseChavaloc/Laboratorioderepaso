@@ -81,10 +81,11 @@
             // 
             // numericUpDownEmpleado
             // 
-            this.numericUpDownEmpleado.Location = new System.Drawing.Point(254, 95);
+            this.numericUpDownEmpleado.Location = new System.Drawing.Point(254, 70);
             this.numericUpDownEmpleado.Name = "numericUpDownEmpleado";
             this.numericUpDownEmpleado.Size = new System.Drawing.Size(120, 22);
             this.numericUpDownEmpleado.TabIndex = 4;
+            this.numericUpDownEmpleado.ValueChanged += new System.EventHandler(this.numericUpDownEmpleado_ValueChanged);
             // 
             // txtNombre
             // 
@@ -92,6 +93,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 22);
             this.txtNombre.TabIndex = 5;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // maskedTxtSueldo
             // 
@@ -109,15 +111,17 @@
             this.btnGuardar.TabIndex = 7;
             this.btnGuardar.Text = "Guardar Empleado";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnReporte
             // 
-            this.btnReporte.Location = new System.Drawing.Point(486, 448);
+            this.btnReporte.Location = new System.Drawing.Point(320, 402);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(134, 48);
             this.btnReporte.TabIndex = 8;
             this.btnReporte.Text = "Ir a Reporte";
             this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // dataGridView1
             // 
@@ -137,6 +141,7 @@
             this.btnAsistencia.TabIndex = 10;
             this.btnAsistencia.Text = "Ingresar Asistencia";
             this.btnAsistencia.UseVisualStyleBackColor = true;
+            this.btnAsistencia.Click += new System.EventHandler(this.btnAsistencia_Click);
             // 
             // btnCerrar
             // 
@@ -146,6 +151,7 @@
             this.btnCerrar.TabIndex = 11;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // FormEmpleado
             // 

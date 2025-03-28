@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Laboratorioderepaso
 {
-    class Empleado
+    internal class Empleado
     {
+        public int NoEmpleado { get; set; }
+        public string Nombre { get; set; }
+        public Decimal SueldoHora { get; set; }
+
     }
 }

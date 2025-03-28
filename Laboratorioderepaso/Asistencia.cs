@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Laboratorioderepaso
 {
-    class Asistencia
+    internal class Asistencia
     {
+        public int NoEmpleado { get; set; }
+        public int horasMes { get; set; }
+        public int mes { get; set; }
     }
 }
